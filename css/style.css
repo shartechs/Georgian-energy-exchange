@@ -1,0 +1,402 @@
+/* Fonts */
+@font-face {
+  font-family: "MarkGEOCAPSBold";
+  src: url("fonts/MarkGEOCAPSBold.eot");
+  src: url("fonts/MarkGEOCAPSBold.eot") format("embedded-opentype"),
+    url("fonts/MarkGEOCAPSBold.woff2") format("woff2"),
+    url("fonts/MarkGEOCAPSBold.woff") format("woff"),
+    url("fonts/MarkGEOCAPSBold.ttf") format("truetype"),
+    url("fonts/MarkGEOCAPSBold.svg#MarkGEOCAPSBold") format("svg");
+}
+
+/* Variables */
+:root {
+  --main-blue: #0e8ac3;
+  --light-blue: #e8f1fe;
+  --grey: #7c7c7c;
+  --light-grey: #ebebeb;
+}
+
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "MarkGEOCAPSBold";
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 45px auto;
+  color: var(--main-blue);
+}
+
+img {
+  max-width: 100%;
+  transition: all 0.2s ease;
+}
+
+button {
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+a:hover {
+  transition: all 0.2s ease;
+  color: var(--main-blue);
+}
+
+i {
+  color: var(--grey);
+}
+
+i:hover {
+  transition: all 0.2s ease;
+  color: var(--main-blue);
+}
+
+/* Reusable components */
+
+section {
+  margin-bottom: 100px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filler {
+  background-color: var(--light-blue);
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue {
+  background-color: #f6f9ff;
+}
+
+.grey {
+  background-color: #f6f6f6;
+  padding: 30px 0px;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn1 {
+  background-color: var(--main-blue);
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 8px 10px;
+  font-family: "MarkGEOCAPSBold";
+}
+
+.btn1:hover {
+  transform: scale(1.1);
+}
+
+.btn2 {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--grey);
+  text-transform: uppercase;
+  margin: 0px 15px;
+  padding: 18px 0px;
+  font-family: "MarkGEOCAPSBold";
+}
+
+.btn2:hover,
+.btn2:focus {
+  color: var(--main-blue);
+  border-bottom: 3px solid var(--main-blue);
+}
+
+.btn3 {
+  padding: 15px 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: white;
+  border: 2px solid var(--light-grey);
+  color: var(--grey);
+  font-family: "MarkGEOCAPSBold";
+}
+
+.btn3:not(.active):hover {
+  background-color: var(--light-blue);
+}
+
+.btn4 {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--grey);
+  margin: 20px 0px;
+  font-family: "MarkGEOCAPSBold";
+}
+
+.btn4:hover {
+  color: var(--main-blue);
+}
+
+.more {
+  text-decoration: none;
+  color: var(--grey);
+  text-transform: uppercase;
+  font-family: "MarkGEOCAPSBold";
+}
+
+.more:hover {
+  color: var(--main-blue);
+}
+
+/* Header style */
+
+.main-nav {
+  display: flex;
+  font-family: "MarkGEOCAPSBold";
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-left: 1px solid var(--light-grey);
+}
+
+.btn-om {
+  color: var(--main-blue);
+  font-family: "MarkGEOCAPSBold";
+  background-color: var(--light-blue);
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+.btn-om:hover,
+.btn-om:focus {
+  color: white;
+  background-color: var(--main-blue);
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+.hero {
+  background-image: url(images/hero-image.png);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: 370px;
+  color: white;
+}
+
+header h1,
+h3 {
+  text-align: left;
+}
+
+header .btn1 {
+  margin-top: 20px;
+}
+
+/* Market section */
+
+.market {
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  color: var(--main-blue);
+}
+
+.page {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  grid-row-gap: 48px;
+  padding: 16px;
+}
+
+.list {
+  display: grid;
+  grid-row-gap: 24px;
+}
+
+.list > div {
+  display: grid;
+  grid-template-columns: 24px minmax(0, max-content);
+  grid-gap: 4px 8px;
+  align-items: center;
+}
+
+.list div .comment {
+  grid-column: 1 / -1;
+}
+
+.vertical img {
+  margin: 10px 1px;
+}
+
+/* Price development */
+
+.title {
+  display: inline-block;
+  width: fit-content;
+  padding: 5px 20px;
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.price {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 50px 20px;
+}
+
+.price img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* News section */
+.news {
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] minmax(150px, 1fr));
+  grid-column-gap: 20px;
+  padding: 16px;
+}
+
+.news img {
+  margin: 15px 0px;
+  filter: brightness(70%);
+}
+
+.news img:hover {
+  filter: brightness(100%);
+}
+
+/* Media section */
+
+.media {
+  display: grid;
+  grid-template-columns: repeat(3, [col-start] minmax(150px, 1fr));
+  grid-column-gap: 20px;
+}
+
+.media img {
+  filter: brightness(70%);
+}
+
+.media img:hover {
+  filter: brightness(100%);
+}
+
+/* Footer style */
+
+footer {
+  background-image: linear-gradient(
+      rgba(16, 43, 79, 0.9),
+      rgba(16, 43, 79, 0.904)
+    ),
+    url(images/hero-image.png);
+  height: 350px;
+}
+
+footer .grid {
+  display: grid;
+  grid-template-columns: 3fr 1.2fr 1.5fr 1.2fr 2fr 1.5fr 1fr;
+  grid-column-gap: 20px;
+  justify-content: center;
+}
+
+.footer-nav ul,
+.footer-nav li,
+.footer-nav a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.footer-nav {
+  margin-top: 50px;
+}
+
+.footer-nav li {
+  margin-top: 10px;
+}
+
+.footer-nav a:hover {
+  color: var(--main-blue);
+}
+
+.social {
+  color: white;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.social:hover {
+  color: var(--main-blue);
+}
+
+.special {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: "MarkGEOCAPSBold";
+}
+
+#email {
+  padding: 8px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid var(--grey);
+  color: white;
+}
